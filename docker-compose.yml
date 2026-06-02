@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  finance_api:
+    build: .
+    container_name: finance_api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./database.db:/app/database.db
+    restart: unless-stopped
